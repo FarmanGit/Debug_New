@@ -15,6 +15,7 @@ int sub(int d1, int d2, int d3) {
 	}
 	for (i = 0; i < 10; i++) {
 		printf("buf[%d]=%d\n", i, buf[i]);
+		puts("!!!Hello World!   modifications!!");
 	}
 	return 0;
 }

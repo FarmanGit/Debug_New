@@ -23,10 +23,10 @@ endif
 # Add inputs and outputs from these tool invocations to the build variables 
 
 # All Target
-all: cdebug1
+all: Debug_NewImport
 
 # Tool invocations
-cdebug1: $(OBJS) $(USER_OBJS)
+Debug_NewImport: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C Linker'
 	$(CC) $(TIMESTORM_LINKER_FLAG) $(OBJS) $(USER_OBJS) $(LIBS)
@@ -35,7 +35,7 @@ cdebug1: $(OBJS) $(USER_OBJS)
 
 # Other Targets
 clean:
-	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) cdebug1
+	-$(RM) $(EXECUTABLES)$(OBJS)$(C_DEPS) Debug_NewImport
 	-@echo ' '
 
 .PHONY: all clean dependents
